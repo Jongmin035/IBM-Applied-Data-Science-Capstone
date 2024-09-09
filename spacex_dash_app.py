@@ -87,7 +87,8 @@ def get_scatter_plot(entered_site, payload_mass):
         fig = px.scatter(spacex_df, 
             x='Payload Mass (kg)',
             y='class',
-            color='Booster Version Category'
+            color='Booster Version Category',
+            range_x=(payload_mass)
         )
         return fig
     else:
@@ -95,7 +96,8 @@ def get_scatter_plot(entered_site, payload_mass):
         fig = px.scatter(filtered_df,
             x='Payload Mass (kg)',
             y='class',
-            color='Booster Version Category'
+            color='Booster Version Category',
+            range_x=(payload_mass)
         )
         return fig
 
